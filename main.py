@@ -37,11 +37,20 @@ for idx, box in enumerate(detect_results.boxes):
     cropped = image_cv[y1:y2, x1:x2]
     crop_path = os.path.join(CROP_DIR, f"bird_{idx}.jpg")
     cv2.imwrite(crop_path, cropped)
+    bbox_width = x2 - x1
+    bbox_height = y2 - y1
+    bbox = {
+        "x": x1,
+        "y": y2,  # Lower-left y in image coordinates (top-left origin)
+        "width": bbox_width,
+        "height": bbox_height
+    }
+
     cropped_boxes.append({
         "id": idx,
         "bird_id": ''.join(random.choices(string.ascii_uppercase + string.digits, k=6)),
         "crop_path": crop_path,
-        "bbox": {"x1": x1, "y1": y1, "x2": x2, "y2": y2},
+        "bbox": bbox,
         "confidence": float(box.conf[0])
     })
 

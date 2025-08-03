@@ -1,18 +1,18 @@
 [
   {
     "id": 0,
-    "bird_id": "SAJHK2",
+    "bird_id": "HYEDUG",
     "crop_path": "cropped_birds\\bird_0.jpg",
     "bbox": {
-      "x1": 78,
-      "y1": 90,
-      "x2": 153,
-      "y2": 212
+      "x": 78,
+      "y": 212,
+      "width": 75,
+      "height": 122
     },
     "confidence": 0.9236388206481934,
     "species": {
       "name": "Northern Cardinal",
-      "color": "#E98837"
+      "color": "#B55631"
     },
     "keypoints": [
       {
@@ -97,18 +97,18 @@
   },
   {
     "id": 1,
-    "bird_id": "UE953M",
+    "bird_id": "HRTKTV",
     "crop_path": "cropped_birds\\bird_1.jpg",
     "bbox": {
-      "x1": 182,
-      "y1": 109,
-      "x2": 241,
-      "y2": 180
+      "x": 182,
+      "y": 180,
+      "width": 59,
+      "height": 71
     },
     "confidence": 0.9066831469535828,
     "species": {
       "name": "American Goldfinch",
-      "color": "#70E304"
+      "color": "#4AA267"
     },
     "keypoints": [
       {
@@ -193,18 +193,18 @@
   },
   {
     "id": 2,
-    "bird_id": "45OITO",
+    "bird_id": "XG2V3U",
     "crop_path": "cropped_birds\\bird_2.jpg",
     "bbox": {
-      "x1": 257,
-      "y1": 93,
-      "x2": 336,
-      "y2": 168
+      "x": 257,
+      "y": 168,
+      "width": 79,
+      "height": 75
     },
     "confidence": 0.8725730776786804,
     "species": {
       "name": "Northern Cardinal",
-      "color": "#E98837"
+      "color": "#B55631"
     },
     "keypoints": [
       {
@@ -289,18 +289,18 @@
   },
   {
     "id": 3,
-    "bird_id": "55BBLW",
+    "bird_id": "UTI8W5",
     "crop_path": "cropped_birds\\bird_3.jpg",
     "bbox": {
-      "x1": 414,
-      "y1": 128,
-      "x2": 498,
-      "y2": 205
+      "x": 414,
+      "y": 205,
+      "width": 84,
+      "height": 77
     },
     "confidence": 0.8671669363975525,
     "species": {
       "name": "Eastern Bluebird",
-      "color": "#7694D0"
+      "color": "#08C521"
     },
     "keypoints": [
       {
@@ -385,18 +385,18 @@
   },
   {
     "id": 4,
-    "bird_id": "ZPC5G0",
+    "bird_id": "LZ409T",
     "crop_path": "cropped_birds\\bird_4.jpg",
     "bbox": {
-      "x1": 348,
-      "y1": 133,
-      "x2": 425,
-      "y2": 184
+      "x": 348,
+      "y": 184,
+      "width": 77,
+      "height": 51
     },
     "confidence": 0.7359963059425354,
     "species": {
       "name": "Chipping Sparrow",
-      "color": "#A33C56"
+      "color": "#703D06"
     },
     "keypoints": [
       {
@@ -481,18 +481,18 @@
   },
   {
     "id": 5,
-    "bird_id": "L6309B",
+    "bird_id": "R87U8B",
     "crop_path": "cropped_birds\\bird_5.jpg",
     "bbox": {
-      "x1": 2,
-      "y1": 54,
-      "x2": 70,
-      "y2": 173
+      "x": 2,
+      "y": 173,
+      "width": 68,
+      "height": 119
     },
     "confidence": 0.6879727840423584,
     "species": {
       "name": "House Finch",
-      "color": "#688951"
+      "color": "#36896B"
     },
     "keypoints": [
       {
