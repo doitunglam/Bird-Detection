@@ -48,7 +48,6 @@ for idx, box in enumerate(detect_results.boxes):
 
     cropped_boxes.append({
         "id": idx,
-        "bird_id": ''.join(random.choices(string.ascii_uppercase + string.digits, k=6)),
         "crop_path": crop_path,
         "bbox": bbox,
         "confidence": float(box.conf[0])
