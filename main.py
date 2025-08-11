@@ -108,7 +108,37 @@ if pose_result.keypoints is not None and len(pose_result.keypoints.xy) > 0:
 # Assign keypoints (shared for now)
 for box in cropped_boxes:
     box["keypoints"] = all_keypoints
+    
+# === Step 4.5: Keypoint Linking Mechanism ===
+# Define keypoint connections (index-based from KEYPOINT_NAMES)
+# Adjust these based on your dataset's definition of skeleton structure
+KEYPOINT_LINKS = [
+    (1, 5),   # beak -> forehead
+    (5, 4),   # forehead -> crown
+    (4, 9),   # crown -> nape
+    (9, 0),   # nape -> back
+    (0, 13),  # back -> tail
+    (0, 8),   # back -> left wing
+    (0, 12),  # back -> right wing
+    (2, 3),   # belly -> breast
+    (3, 14),  # breast -> throat
+    (14, 5),  # throat -> forehead
+    (2, 7),   # belly -> left leg
+    (2, 11),  # belly -> right leg
+    (6, 10),  # left eye -> right eye
+    (6, 5),   # left eye -> forehead
+    (10, 5),  # right eye -> forehead
+]
 
+# Assign keypoints and links to each box
+for box in cropped_boxes:
+    box["keypoints"] = all_keypoints
+    box["keypoint_links"] = [
+        {"from": start, "to": end}
+        for start, end in KEYPOINT_LINKS
+        if any(kp["id"] == start for kp in all_keypoints) and
+           any(kp["id"] == end for kp in all_keypoints)
+        
 # === Step 5: Output as JSON ===
 with open("final_output.json", "w", encoding="utf-8") as f:
     json.dump(cropped_boxes, f, indent=2, ensure_ascii=False)
