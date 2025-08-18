@@ -7,7 +7,9 @@ import string
 from PIL import Image
 from ultralytics import YOLO
 import onnxruntime as ort
+import logging
 
+logging.getLogger("ultralytics").setLevel(logging.ERROR)
 # === CONFIG ===
 IMAGE_PATH = "input.jpg"
 CROP_DIR = "cropped_birds"
@@ -138,6 +140,7 @@ for box in cropped_boxes:
         for start, end in KEYPOINT_LINKS
         if any(kp["id"] == start for kp in all_keypoints) and
            any(kp["id"] == end for kp in all_keypoints)
+    ]
         
 # === Step 5: Output as JSON ===
 with open("final_output.json", "w", encoding="utf-8") as f:
